@@ -5,7 +5,7 @@
     angular.module("indexContentModule" ,[]).
         directive("restaurantHeader" ,[function(){
         return{
-            templateUrl :"src/restaurant-header/read/header-view.html",
+            templateUrl :"src/header/read/header-view.html",
             link :function(scope, element, attrs, parentController){
                 console.log(arguments);
             }
