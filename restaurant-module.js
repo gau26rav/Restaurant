@@ -33,6 +33,10 @@ angular.module('restaurantModule',[
             url : "/about",
             templateUrl :"./src/restaurant-about/read/about.html"
         })
+        .state("cart" ,{
+            url :"/cart",
+            templateUrl :"./src/cart-page/read/cart-view.html"
+        })
 
 }])
 
