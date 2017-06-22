@@ -4,7 +4,9 @@
 (function () {
     angular.module("indexContentModule").directive("bookingArea", function () {
         return{
-            templateUrl :"src/restaurant-home/home-directives/booking-area-directive/booking-area-view.html"
+            templateUrl :"src/restaurant-home/home-directives/booking-area-directive/booking-area-view.html",
+            controllerAs :"bookTableCtrl",
+            controller :"bookAreaController"
         }
     })
 })();

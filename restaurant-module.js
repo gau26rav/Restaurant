@@ -20,10 +20,13 @@ angular.module('restaurantModule',[
                 '' :{
                     templateUrl :'./src/restaurant-home/read/restaurant-home-view.html'
                 },
-                'bookTableVisualization@home':{
+                'bookATableVisualization@home':{
 
                 }
             }
+
+        }).
+        state("home.bookATableVisualization" ,{
 
         })
         .state("about" ,{
