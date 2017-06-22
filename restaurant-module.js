@@ -16,7 +16,19 @@ angular.module('restaurantModule',[
 
         .state('home',{
             url : '/',
-            templateUrl :'./src/restaurant-home/read/restaurant-home-view.html'
+            views:{
+                '' :{
+                    templateUrl :'./src/restaurant-home/read/restaurant-home-view.html'
+                },
+                'bookTableVisualization@home':{
+
+                }
+            }
+
+        })
+        .state("about" ,{
+            url : "/about",
+            templateUrl :"./src/restaurant-about/read/about.html"
         })
 
 }])
