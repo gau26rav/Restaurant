@@ -13,9 +13,10 @@
                     },
                     function (error) {
                         $log.error("API call failed ")
-                        deferred.reject(error)
+                        deferred.reject(error);
                     }
                 )
+
                 return deferred.promise;
             }
 
@@ -30,6 +31,9 @@
                         deferred.reject(error);
                     }
                 );
+            }
+            function putData(path,data ) {
+
             }
 
             return {
