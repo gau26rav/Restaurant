@@ -36,12 +36,17 @@ angular.module('restaurantModule',[
         .state("cart" ,{
             url :"/cart",
             templateUrl :"./src/cart-page/read/cart-view.html"
-        })
+        });
 
 }])
 
 .run(['$rootScope', 'RESTAURANT_CONFIG',function ($rootScope, RESTAURANT_CONFIG) {
 
     $rootScope.restaurantConfig = RESTAURANT_CONFIG;
+    $rootScope.serviceBaseUrl ="http://localhost:3000";
+    $rootScope.url ={
+        tableStatus :"/tableStatus"
+    };
+
 
 }]);

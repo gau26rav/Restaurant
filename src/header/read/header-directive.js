@@ -2,7 +2,7 @@
  * Created by gt250075 on 6/22/2017.
  */
 (function () {
-    angular.module("indexContentModule" ,[]).
+    angular.module("indexContentModule" ,['restaurant.httpService']).
         directive("restaurantHeader" ,[function(){
         return{
             templateUrl :"src/header/read/header-view.html",

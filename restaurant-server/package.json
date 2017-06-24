@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-server",
+  "version": "1.0.0",
+  "description": "This is the module for providing REST services/API to restaurant client",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gau26rav/Restaurant.git"
+  },
+  "keywords": [
+    "restaurant-server",
+    "REST"
+  ],
+  "author": "Er. Vikash & Gaurav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gau26rav/Restaurant/issues"
+  },
+  "homepage": "https://github.com/gau26rav/Restaurant#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
