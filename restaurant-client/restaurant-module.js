@@ -45,7 +45,8 @@ angular.module('restaurantModule',[
     $rootScope.restaurantConfig = RESTAURANT_CONFIG;
     $rootScope.serviceBaseUrl ="http://localhost:3000";
     $rootScope.url ={
-        tableStatus :"/tableStatus"
+        tableStatus :"/tableStatus",
+        bookTable : "/bookTable"
     };
 
 

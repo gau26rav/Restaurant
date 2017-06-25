@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/gau26rav/Restaurant#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.3"
   }
 }

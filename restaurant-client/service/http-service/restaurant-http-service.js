@@ -32,13 +32,23 @@
                     }
                 );
             }
-            function putData(path,data ) {
-
+            function putData(path, data, header) {
+                var deferred = $q.defer();
+                $http.put(path, data, header).then(
+                    function (response) {
+                        deferred.resolve(response.data);
+                    },
+                    function (error) {
+                        deferred.reject(error);
+                    }
+                );
+                return deferred.promise;
             }
 
             return {
                 getData: getData,
-                postData: postData
+                postData: postData,
+                putData :putData
             };
         }]);
 })();

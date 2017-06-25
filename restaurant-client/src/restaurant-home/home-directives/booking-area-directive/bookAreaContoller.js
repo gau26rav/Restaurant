@@ -7,21 +7,26 @@
         var self =this;
         self.bookingDone = false;
         self.goToBookTable =function () {
-            $timeout(function () {
-                self.bookingDone = true;
-            }, 1000);
+            httpClient.getData($rootScope.serviceBaseUrl + $rootScope.url.tableStatus).then(function (response) {
+                    self.tableConfiguration = response;
+                    self.bookingDone = true;
+                },
+                function (error) {
+                    console.log("API call failed", error);
+                }
+            );
+
         }
         self.bookTable =function (tableNo) {
-            // index of array starts from 0
-            //tableConfiguration[tableNo -1].booked =true;
-        }
-        httpClient.getData($rootScope.serviceBaseUrl + $rootScope.url.tableStatus).then(function (response) {
-            self.tableConfiguration = response
-        },
-        function (error) {
-            console.log("API call failed", error);
-        }
-        );
+            httpClient.putData($rootScope.serviceBaseUrl + $rootScope.url.bookTable+ "/" + tableNo ).then(function (response) {
+                debugger;
+                self.tableConfiguration = response;
+                },
+                function (error) {
+                    console.log("API call failed", error);
+                }
+            );
+        };
 
-    }])
+    }]);
 })();
