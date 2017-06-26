@@ -24,6 +24,6 @@ app.use(allowCrossDomain);
 app.use(bodyParser.json());
 router(app);
 
-app.listen(PORT, function () {
+module.exports = app.listen(PORT, function () {
   console.log("Express application is listening on", PORT);
 });
